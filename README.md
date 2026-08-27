@@ -1,6 +1,6 @@
 # Next.js Start Template
 
-A minimal starter template for building Next.js apps. Clone it, install dependencies, and start building.
+A minimal starter template for building Next.js apps. Use this template, install dependencies, and start building.
 
 ## What's included
 
@@ -27,18 +27,18 @@ eval "$(mise activate zsh)"
 
 ## Getting started
 
-```bash
-# 1. Clone the repo
-git clone <your-repo-url> my-app
-cd my-app
+1. Click **Use this template** on GitHub to create a new repository.
+2. Clone your new repo and open it locally.
+3. Install tooling and dependencies:
 
-# 2. Install Node and pnpm (versions pinned in mise.toml)
+```bash
+# Install Node and pnpm (versions pinned in mise.toml)
 mise install
 
-# 3. Install dependencies
+# Install dependencies
 pnpm install
 
-# 4. Start the dev server
+# Start the dev server
 pnpm dev
 ```
 
@@ -46,24 +46,24 @@ Open [http://localhost:3000](http://localhost:3000) to view the app. Edit `app/p
 
 ## Scripts
 
-| Command             | Description                        |
-| ------------------- | ---------------------------------- |
-| `pnpm dev`          | Start development server           |
-| `pnpm build`        | Build for production               |
-| `pnpm start`        | Run production build               |
-| `pnpm lint`         | Run ESLint                         |
-| `pnpm format`       | Format code with Prettier          |
-| `pnpm format:check` | Check formatting without writing   |
-| `pnpm check`        | Run format check and lint together |
+| Command             | Description                                    |
+| ------------------- | ---------------------------------------------- |
+| `pnpm dev`          | Start development server                       |
+| `pnpm build`        | Build for production                           |
+| `pnpm start`        | Run production build                           |
+| `pnpm lint`         | Run ESLint                                     |
+| `pnpm typecheck`    | Generate Next types and run `tsc --noEmit`     |
+| `pnpm format`       | Format code with Prettier                      |
+| `pnpm format:check` | Check formatting without writing               |
+| `pnpm check`        | Run format check, lint, and typecheck together |
 
 ## Project structure
 
 ```
-app/
-  layout.tsx    # Root layout
-  page.tsx      # Home page
-  globals.css   # Global styles (Tailwind)
-public/         # Static assets
+app/              # Routes, layouts, and global styles
+components/       # Shared React components
+lib/              # Shared helpers and utilities
+public/           # Static assets
 ```
 
 ## Deploy
