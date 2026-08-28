@@ -1,6 +1,6 @@
-# Next.js Start Template
+# Stock Screener
 
-A minimal starter template for building Next.js apps. Use this template, install dependencies, and start building.
+A Next.js starter for building a stock screener app. Includes a Tailwind-based color system, semantic design tokens, and a starter folder structure.
 
 ## What's included
 
@@ -60,11 +60,17 @@ Open [http://localhost:3000](http://localhost:3000) to view the app. Edit `app/p
 ## Project structure
 
 ```
-app/              # Routes, layouts, and global styles
-components/       # Shared React components
-lib/              # Shared helpers and utilities
-public/           # Static assets
+app/                    # Routes, layouts, and global styles
+components/
+  layout/               # App shell, header, navigation
+  screener/             # Stock screener domain components
+  ui/                   # Reusable UI primitives
+lib/                    # Helpers, colors, market convention
+types/                  # Shared TypeScript types
+public/                 # Static assets
 ```
+
+Design tokens live in `app/globals.css`. See `lib/colors.ts` for semantic Tailwind class references.
 
 ## Deploy
 

@@ -29,9 +29,11 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-bg-app);
+  color: var(--color-text-primary);
+  font-family:
+    var(--font-geist-sans), ui-sans-serif, system-ui, "PingFang SC",
+    "Microsoft YaHei", sans-serif;
 }
 
 /* 6. Improve media defaults */
@@ -84,21 +86,57 @@ h6 {
   isolation: isolate;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Stock Screener design tokens
+  Palette: slate, blue, emerald, red, amber, violet (Tailwind defaults)
+*/
+
+:root,
+[data-market="international"] {
+  --market-up: var(--color-emerald-600);
+  --market-down: var(--color-red-600);
+  --market-up-soft: var(--color-emerald-50);
+  --market-down-soft: var(--color-red-50);
+}
+
+[data-market="china"] {
+  --market-up: var(--color-red-600);
+  --market-down: var(--color-emerald-600);
+  --market-up-soft: var(--color-red-50);
+  --market-down-soft: var(--color-emerald-50);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Surfaces */
+  --color-bg-app: var(--color-slate-50);
+  --color-bg-surface: #ffffff;
+  --color-bg-inverse: var(--color-slate-900);
+
+  /* Borders */
+  --color-border: var(--color-slate-200);
+  --color-border-input: var(--color-slate-300);
+
+  /* Text */
+  --color-text-primary: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-600);
+  --color-text-muted: var(--color-slate-400);
+
+  /* Brand / actions */
+  --color-primary: var(--color-blue-600);
+  --color-primary-hover: var(--color-blue-700);
+  --color-primary-soft: var(--color-blue-50);
+
+  /* Market movement (switches with data-market) */
+  --color-market-up: var(--market-up);
+  --color-market-down: var(--market-down);
+  --color-market-up-soft: var(--market-up-soft);
+  --color-market-down-soft: var(--market-down-soft);
+
+  /* Status */
+  --color-warning: var(--color-amber-600);
+  --color-danger: var(--color-red-700);
+  --color-ai: var(--color-violet-600);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
