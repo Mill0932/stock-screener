@@ -36,15 +36,6 @@
 
 ---
 
-## Related links
-
-<!-- Add anything that helps reviewers understand your work. -->
-
-- Issue / task:
-- Design reference (Figma, doc, etc.):
-- Other PRs this depends on:
-
----
 
 ## Self-review checklist
 
@@ -54,7 +45,6 @@ Check these **before** you request a review.
 
 - [ ] I ran `pnpm check` locally and it passed
 - [ ] I ran `pnpm build` locally and it passed
-- [ ] I used **TypeScript** (no `any` unless I left a comment explaining why)
 - [ ] I used **semantic color classes** from our design system (not random hex values)
 - [ ] I put files in the right folders (`components/`, `lib/`, `types/`, etc.)
 - [ ] I removed `console.log`, commented-out code, and unused imports
