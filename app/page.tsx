@@ -3,7 +3,7 @@ export default function Home() {
     <main className="flex flex-1 flex-col bg-bg-app">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-4 px-6 py-24">
         <p className="font-mono text-xs font-semibold tracking-[0.14em] text-text-muted uppercase">
-          Stock Screener
+          Stock Screener with Luo in Class 4
         </p>
         <h1 className="text-3xl font-bold tracking-tight text-text-primary">
           Ready when you are
